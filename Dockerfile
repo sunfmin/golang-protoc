@@ -1,9 +1,9 @@
-FROM golang:alpine
+FROM golang
 
 ENV PROTOC_VERSION=3.0.0-beta-2
 
-RUN apk update && \
-  apk add build-base curl autoconf automake libtool file zlib-dev git
+RUN apt-get update && \
+	apt-get install -y --no-install-recommends git curl unzip curl dh-autoreconf wamerican
 
 ADD https://github.com/google/protobuf/releases/download/v"$PROTOC_VERSION"/protobuf-cpp-"$PROTOC_VERSION".tar.gz protobuf.tgz
 
