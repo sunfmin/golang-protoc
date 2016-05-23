@@ -37,5 +37,4 @@ RUN apk update && \
     cp /go/bin/protoc-gen-go /usr/bin/ && \
     rm -rf $GOPATH && \
 
-    apk del $PACKAGES && \
     rm -rf /var/cache/apk/*
