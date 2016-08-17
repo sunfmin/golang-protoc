@@ -20,9 +20,9 @@ RUN apk update && \
 
     mkdir -pv /tmp/src && \
     cd /tmp/src && \
-    wget https://github.com/google/protobuf/archive/v3.0.0-beta-3.tar.gz && \
-    tar -zxf v3.0.0-beta-3.tar.gz && \
-    cd ./protobuf-3.0.0-beta-3 && \
+    wget https://github.com/google/protobuf/archive/v3.0.0.tar.gz && \
+    tar -zxf v3.0.0.tar.gz && \
+    cd ./protobuf-3.0.0 && \
     ./autogen.sh && \
     ./configure --prefix=/usr --disable-shared && \
     make -j 2 && \
